@@ -1,0 +1,355 @@
+html, body{
+    background-color: #000000;
+    margin: 0px;
+    scroll-behavior: smooth;
+    
+}
+
+body h1 {
+  font-size: 30px;
+  font-family:   sans-serif;
+}
+body p {
+  
+  font-family:   system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #EEEEEE;
+}
+nav{
+  
+  z-index: 1;
+  position: fixed;
+  background: linear-gradient(to right, #240441, #8a4bc9); 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+ 
+}
+
+
+nav ul li:hover{
+    color: black;
+    
+} 
+
+nav ul li{
+    font-size: 25px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(247, 247, 247);
+    padding: 30px 50px;
+    cursor: pointer; 
+    font-family:   monospace;
+}
+nav ul li a:hover{
+    
+    color: black;
+    padding: 30px 50px; 
+
+}
+.imagem img{
+  /*padding-left: 280px;*/
+  width: 200px;
+  
+}
+
+nav ul{
+    
+    text-align: right;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    width: 100%;
+}
+
+.imagem{
+width: 15%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+img {
+  
+  position: relative;
+  display: block;
+
+}
+.carousel .slide {
+    
+    display: none;
+    
+  }
+  
+  .carousel .slide.active {
+    display: block;
+    
+  }
+  
+  .carousel .texto {
+    font-size: 20px;
+    text-align: center;
+    /*position: absolute;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111010;
+    color: #fff;
+    padding: 10px;
+  }
+  .carousel .slide img {
+    width: 100%;
+    height: 600px;
+    display: block;
+    
+  }
+  
+
+
+  .conteudo h1{
+    
+    color: rgb(250, 250, 250);
+   
+  }
+  .conteudo p{
+    display: flex;
+    justify-content: center; /* Centralização horizontal */
+    align-items: center; /* Centralização vertical */
+    padding: 0px 200px 200px 200px;
+    
+  }
+ 
+ section .conteudo{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+ }
+ 
+ .justificado{
+  text-align: justify;
+ }
+
+ .titulo h1{
+  text-align: center;
+  display: block;
+  padding-bottom: 50px;
+ }
+ 
+ .projetos{
+  overflow: auto;
+  overflow-x: hidden;
+  
+ }
+
+ .projetos h1{
+  flex: 2;
+ }
+
+
+.projeto{
+  padding: 200px;
+  background: linear-gradient(to right, #100e13, #2e114b); 
+
+ }
+
+
+ 
+.direito img{
+  margin-top: 23px;
+  
+  float: left;
+  width: 450px;
+  height: 450px;
+  
+}
+
+
+.esquerdo img{
+  margin-top: 23px;
+ 
+  width: 450px;
+  height: 450px; 
+  float: right;
+}
+
+
+.direito p{
+  text-align: justify;
+  font-size: 20px;
+  margin-left: 30px;
+  
+}
+
+.direito{
+  display: flex;
+  margin-bottom: 250px;
+}
+.esquerdo{
+  
+  margin-bottom: 200px;
+  display: flex;
+}
+
+.esquerdo p{
+  text-align: justify;
+  font-size: 20px;
+  margin-left: 30px;
+ 
+}
+
+
+p{
+  color: white;
+}
+
+section h1{
+  
+  text-align: center;
+  color: white;
+  font-family:   sans-serif;
+ }
+
+
+.noticias{
+  display: inline-block;
+  margin: 0px 200px;
+  color: white;
+  border: rgba(129, 64, 185, 0.555) 4px solid;
+ }
+ .noticias h2{
+  margin-left: 10px;
+ }
+ .noticias p{
+  margin-left: 20px;
+ }
+
+ @media screen and (max-width: 290px){
+  
+  
+  .conteudo h1{ 
+    font-size: 2px;
+    
+  }
+  .conteudo p{
+    font-size: 2px;
+  }
+ }
+ 
+ 
+ @media screen and (max-width: 728px) {
+  
+  
+  .imagem img{
+    display: none;
+  }
+  ul {
+    display: flex; /* or inline-flex */
+    justify-content: space-between;
+    padding: 30px;
+    
+    
+  }
+  nav ul li{
+    padding: 0px;
+    
+    
+  }
+  nav ul li a{
+    padding: 2px;
+    
+  }
+ 
+    
+
+  .direito p{
+    margin: 0px;
+    
+  }
+  .esquerdo p{
+    margin: 0px;
+    
+  }
+  .projeto{
+    padding: 0px;
+  }
+
+  .conteudo p{
+    
+    padding: 25px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .projeto{
+    overflow: hidden;
+    
+    
+  }
+
+
+
+  .projetos{
+    overflow: auto;
+    overflow-x: hidden;
+    
+   }
+  
+   .projetos h1{
+    flex: 2;
+   }
+  
+  
+  .direito{
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+  
+  .ajuste{
+    display: flex;
+    flex-direction: column;
+    
+    
+  }
+  .direito img{
+    width: 250px;
+    height: 250px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+   
+
+  }
+  
+  .ajuste p{
+   font-size: 15px;
+  }
+
+ .esquerdo{
+    display: flex;
+    flex-direction: column;
+    
+ }
+  .esquerdo img{
+    width: 250px;
+    height: 250px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  .titulo h1{
+    text-align: center;
+    padding-left: 0px;
+  }
+  .noticias{
+    margin: 10px;
+  }
+  
+  nav ul li{
+    
+    font-size: 15px;
+    padding: 2px;
+  }
+}
+

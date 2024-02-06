@@ -1,19 +1,35 @@
 window.addEventListener('load', function() {
-    var slides = document.querySelectorAll('.carousel .slide');
-    var textos = document.querySelectorAll('.carousel .texto');
-    var currentSlideIndex = 0;
-  
-    function showNextSlide() {
-      slides[currentSlideIndex].classList.remove('active');
-      textos[currentSlideIndex].classList.remove('active');
-      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-      slides[currentSlideIndex].classList.add('active');
-      textos[currentSlideIndex].classList.add('active');
-    }
-  
-    setInterval(showNextSlide, 2000); // Altere o valor para ajustar o tempo de exibição de cada slide (em milissegundos)
+  var slides = document.querySelectorAll('.carousel .slide');
+  var textos = document.querySelectorAll('.carousel .texto');
+  var links = [
+    'link-da-noticia-1',
+    'https://www.youtube.com/watch?v=Qd6x_lVOqEU',
+    'link-da-noticia-3'
+  ];
+  var currentSlideIndex = 0;
+
+  function showNextSlide() {
+    slides[currentSlideIndex].classList.remove('active');
+    textos[currentSlideIndex].classList.remove('active');
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    slides[currentSlideIndex].classList.add('active');
+    textos[currentSlideIndex].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 2000); // Altere o valor para ajustar o tempo de exibição de cada slide (em milissegundos)
+
+  // Adicionar links dinamicamente
+  slides.forEach(function(slide, index) {
+    var link = links[index];
+    var img = slide.querySelector('img');
+    var anchor = document.createElement('a');
+    anchor.setAttribute('href', link);
+    anchor.appendChild(img.cloneNode(true));
+    img.parentNode.replaceChild(anchor, img);
   });
-  
+});
+
+
 
   const btn = document.getElementById("inicio")
   btn.addEventListener("click", function(){
